@@ -1,205 +1,564 @@
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bring in tailwind css -->
+    <link
+      href="https://unpkg.com/tailwindcss@2.1.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- Bring in fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Adding script defered -->
+    <script src="./index.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://unpkg.com/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body class="h-screen overflow-hidden flex items-center justify-center"
-  style="background: #edf2f7;/* padding-top: 15rem; */">
-  <div
-    class="min-w-screen h-screen animated fadeIn faster fixed left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover pt-60"
-    style="background-image: url(https://images.unsplash.com/photo-1604262725913-1c415cd27564?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2142&amp;q=80);"
-    id="modal-id">
-
-
-    <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
-    <h1 class="text-3xl absolute top-8 left-8 text-gray-300"> NOTES APP</h1>
-    <div class="relative min-h-screen flex flex-row justify-center">
-
-      <div class="container ">
-        <div class="max-w-xs w-full bg-gray-900 shadow-lg border mx-2 border-double border-green-400 rounded-md p-6">
-          <div class="flex flex-col">
-            <div class="">
-              <div class="flex-auto justify-evenly">
-                <div class="lg:flex py-4 text-sm text-gray-600 mb-3"
-                  style=" background: #020013; padding: 4px; border-radius: 5px; ">
-                  <div class="flex-1 inline-flex items-center">
-                    <div class=" w-full flex-none text-sm flex items-center text-gray-400 ">
-                      <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                        <li class=""> <span class="block p-1"> <i class="material-icons">drag_indicator</i> </span>
+  <body
+    class="h-screen overflow-hidden flex items-center justify-center"
+    style="background: #edf2f7; /* padding-top: 15rem; */"
+  >
+    <!-- Background Image -->
+    <div
+      class="
+        min-w-screen
+        h-screen
+        animated
+        fadeIn
+        faster
+        fixed
+        left-0
+        top-0
+        flex
+        justify-center
+        items-center
+        inset-0
+        z-50
+        outline-none
+        focus:outline-none
+        bg-no-repeat bg-center bg-cover
+        pt-60
+      "
+      style="
+        background-image: url(https://images.unsplash.com/photo-1604262725913-1c415cd27564?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2142&amp;q=80);
+      "
+      id="modal-id"
+    >
+      <!-- Black Overlay on iamge / Heading-->
+      <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
+      <h1 class="text-3xl absolute top-8 left-8 text-gray-300">NOTES APP</h1>
+      <!-- Content -->
+      <div class="relative min-h-screen flex flex-row justify-center">
+        <div class="container">
+          <div
+            class="
+              max-w-xs
+              w-full
+              bg-gray-900
+              shadow-lg
+              border
+              mx-2
+              border-double border-green-400
+              rounded-md
+              p-6
+            "
+          >
+            <div class="flex flex-col">
+              <div class="">
+                <div class="flex-auto justify-evenly">
+                  <div
+                    class="lg:flex py-4 text-sm text-gray-600 mb-3"
+                    style="
+                      background: #020013;
+                      padding: 4px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <div class="flex-1 inline-flex items-center">
+                      <div
+                        class="
+                          w-full
+                          flex-none
+                          text-sm
+                          flex
+                          items-center
+                          text-gray-400
+                        "
+                      >
+                        <ul
+                          class="
+                            flex flex-row
+                            justify-center
+                            items-center
+                            space-x-2
+                          "
+                        >
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer">
+                                <i class="material-icons">drag_indicator</i>
+                              </a>
+                            </span>
+                          </li>
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer">
+                                <i class="material-icons text-green-400"
+                                  >donut_large</i
+                                ></a
+                              >
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <ul
+                        class="
+                          flex flex-row
+                          justify-center
+                          items-center
+                          space-x-2
+                        "
+                      >
+                        <li class="">
+                          <span class="block p-1"
+                            ><a class="cursor-pointer" id="delete">
+                              <i class="material-icons text-gray-400 text-sm"
+                                >delete</i
+                              ></a
+                            >
+                          </span>
                         </li>
-                        <li class=""> <span class="block p-1"> <i class="material-icons text-green-400">donut_large</i>
-                          </span> </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="edit" >
+                              <i class="material-icons text-gray-400">edit</i>
+                            </a>
+                          </span>
+                        </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="add">
+                              <i class="material-icons text-gray-400"
+                                >add_box</i
+                              ></a
+                            >
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="inline-flex items-center">
-                    <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400 text-sm">delete</i>
-                        </span>
-                      </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400">edit</i>
-                        </span> </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400">add_box</i>
-                        </span> </li>
-                    </ul>
+                  <div class="flex flex-wrap">
+                    <div
+                      class="
+                        flex
+                        items-center
+                        w-full
+                        justify-between
+                        min-w-0
+                        mb-3
+                      "
+                    >
+                      <h2
+                        class="
+                          text-lg
+                          mr-auto
+                          italic
+                          cursor-pointer
+                          text-gray-300
+                          hover:text-purple-500
+                          truncate
+                        "
+                      >
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic
+                      </h2>
+                    </div>
                   </div>
-                </div>
-                <div class="flex flex-wrap">
-                  <div class="flex items-center w-full justify-between min-w-0 mb-3">
-                    <h2 class=" text-lg mr-auto italic cursor-pointer text-gray-300 hover:text-purple-500 truncate ">
-                      Lorem ipsum is placeholder text commonly used in the graphic </h2>
-                  </div>
-                </div>
-                <div class="lg:flex py-2 text-sm text-gray-600">
-                  <div class="flex-1 inline-flex items-center">
-                    <div class=" w-full flex-none text-sm flex items-center text-gray-600 ">
-                      <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                        <li class=""> <span class="block p-1"> <i class="material-icons">drag_indicator</i> </span>
+                  <div class="lg:flex py-2 text-sm text-gray-600">
+                    <div class="flex-1 inline-flex items-center">
+                      <div
+                        class="
+                          w-full
+                          flex-none
+                          text-sm
+                          flex
+                          items-center
+                          text-gray-600
+                        "
+                      >
+                        <ul
+                          class="
+                            flex flex-row
+                            justify-center
+                            items-center
+                            space-x-2
+                          "
+                        >
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer">
+                                <i class="material-icons">drag_indicator</i></a
+                              >
+                            </span>
+                          </li>
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer">
+                                <i
+                                  class="material-icons text-red-500"
+                                  style="font-size: 12px"
+                                  >fiber_manual_record</i
+                                ></a
+                              >
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <ul
+                        class="
+                          flex flex-row
+                          justify-center
+                          items-center
+                          space-x-2
+                        "
+                      >
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600 text-sm" id="delete"
+                              >delete</i
+                            ></a>
+                          </span>
                         </li>
-                        <li class=""> <span class="block p-1"> <i class="material-icons text-red-500"
-                              style="font-size:12px">fiber_manual_record</i>
-                          </span> </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="edit"><i class="material-icons text-gray-600">edit</i>
+                          </span></a>
+                        </li>
+                        <li class="">
+                          <span class="block p-1" id="add">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600">add_box</i></a>
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="inline-flex items-center ">
-                    <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600 text-sm">delete</i>
-                        </span>
-                      </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">edit</i>
-                        </span> </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">add_box</i>
-                        </span> </li>
-                    </ul>
-                  </div>
-                </div>
-                <p class="text-gray-400 font-light mt-1 mb-6"> Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque </p>
+                  <p class="text-gray-400 font-light mt-1 mb-6">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque
+                  </p>
 
-                <div class="lg:flex py-2 text-sm text-gray-600">
-                  <div class="flex-1 inline-flex items-center">
-                    <div class=" w-full flex-none text-sm flex items-center text-gray-600 ">
-                      <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                        <li class=""> <span class="block p-1"> <i class="material-icons">drag_indicator</i> </span>
+                  <div class="lg:flex py-2 text-sm text-gray-600">
+                    <div class="flex-1 inline-flex items-center">
+                      <div
+                        class="
+                          w-full
+                          flex-none
+                          text-sm
+                          flex
+                          items-center
+                          text-gray-600
+                        "
+                      >
+                        <ul
+                          class="
+                            flex flex-row
+                            justify-center
+                            items-center
+                            space-x-2
+                          "
+                        >
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i class="material-icons">drag_indicator</i></a>
+                            </span>
+                          </li>
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i
+                                class="material-icons text-green-500"
+                                style="font-size: 12px"
+                                >fiber_manual_record</i
+                              ></a>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <ul
+                        class="
+                          flex flex-row
+                          justify-center
+                          items-center
+                          space-x-2
+                        "
+                      >
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600 text-sm" id="delete"
+                              >delete</i
+                            ></a>
+                          </span>
                         </li>
-                        <li class=""> <span class="block p-1"> <i class="material-icons text-green-500"
-                              style="font-size:12px">fiber_manual_record</i>
-                          </span> </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="edit"><i class="material-icons text-gray-600">edit</i></a>
+                          </span>
+                        </li>
+                        <li class="">
+                          <span class="block p-1" id="add">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600">add_box</i></a>
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="inline-flex items-center ">
-                    <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600 text-sm">delete</i>
-                        </span>
-                      </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">edit</i>
-                        </span> </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">add_box</i>
-                        </span> </li>
-                    </ul>
-                  </div>
+                  <p class="text-gray-400 font-light mt-1">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque
+                  </p>
                 </div>
-                <p class="text-gray-400 font-light mt-1"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- second card -->
-      <div class="container ">
-        <div class="max-w-xs w-full bg-gray-900 shadow-lg border mx-2 border-double border-green-400 rounded-md p-6">
-          <div class="flex flex-col">
-            <div class="">
-              <div class="flex-auto justify-evenly">
-                <div class="lg:flex py-4 text-sm text-gray-600 mb-3"
-                  style=" background: #020013; padding: 4px; border-radius: 5px; ">
-                  <div class="flex-1 inline-flex items-center">
-                    <div class=" w-full flex-none text-sm flex items-center text-gray-400 ">
-                      <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                        <li class=""> <span class="block p-1"> <i class="material-icons">drag_indicator</i> </span>
+        <!-- second card -->
+        <div class="container">
+          <div
+            class="
+              max-w-xs
+              w-full
+              bg-gray-900
+              shadow-lg
+              border
+              mx-2
+              border-double border-green-400
+              rounded-md
+              p-6
+            "
+          >
+            <div class="flex flex-col">
+              <div class="">
+                <div class="flex-auto justify-evenly">
+                  <div
+                    class="lg:flex py-4 text-sm text-gray-600 mb-3"
+                    style="
+                      background: #020013;
+                      padding: 4px;
+                      border-radius: 5px;
+                    "
+                  >
+                    <div class="flex-1 inline-flex items-center">
+                      <div
+                        class="
+                          w-full
+                          flex-none
+                          text-sm
+                          flex
+                          items-center
+                          text-gray-400
+                        "
+                      >
+                        <ul
+                          class="
+                            flex flex-row
+                            justify-center
+                            items-center
+                            space-x-2
+                          "
+                        >
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i class="material-icons">drag_indicator</i></a>
+                            </span>
+                          </li>
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i class="material-icons text-green-400"
+                                >donut_large</i
+                              ></a>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <ul
+                        class="
+                          flex flex-row
+                          justify-center
+                          items-center
+                          space-x-2
+                        "
+                      >
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-400 text-sm" id="delete"
+                              >delete</i
+                            ></a>
+                          </span>
                         </li>
-                        <li class=""> <span class="block p-1"> <i class="material-icons text-green-400">donut_large</i>
-                          </span> </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="edit"><i class="material-icons text-gray-400">edit</i></a>
+                          </span>
+                        </li>
+                        <li class="">
+                          <span class="block p-1" id="add">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-400">add_box</i></a>
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="inline-flex items-center">
-                    <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400 text-sm">delete</i>
-                        </span>
-                      </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400">edit</i>
-                        </span> </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-400">add_box</i>
-                        </span> </li>
-                    </ul>
+                  <div class="flex flex-wrap">
+                    <div
+                      class="
+                        flex
+                        items-center
+                        w-full
+                        justify-between
+                        min-w-0
+                        mb-3
+                      "
+                    >
+                      <h2
+                        class="
+                          text-lg
+                          mr-auto
+                          italic
+                          cursor-pointer
+                          text-gray-300
+                          hover:text-purple-500
+                          truncate
+                        "
+                      >
+                        Lorem ipsum is placeholder text commonly used in the
+                        graphic
+                      </h2>
+                    </div>
                   </div>
-                </div>
-                <div class="flex flex-wrap">
-                  <div class="flex items-center w-full justify-between min-w-0 mb-3">
-                    <h2 class=" text-lg mr-auto italic cursor-pointer text-gray-300 hover:text-purple-500 truncate ">
-                      Lorem ipsum is placeholder text commonly used in the graphic </h2>
-                  </div>
-                </div>
-                <div class="lg:flex py-2 text-sm text-gray-600">
-                  <div class="flex-1 inline-flex items-center">
-                    <div class=" w-full flex-none text-sm flex items-center text-gray-600 ">
-                      <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                        <li class=""> <span class="block p-1"> <i class="material-icons">drag_indicator</i> </span>
+                  <div class="lg:flex py-2 text-sm text-gray-600">
+                    <div class="flex-1 inline-flex items-center">
+                      <div
+                        class="
+                          w-full
+                          flex-none
+                          text-sm
+                          flex
+                          items-center
+                          text-gray-600
+                        "
+                      >
+                        <ul
+                          class="
+                            flex flex-row
+                            justify-center
+                            items-center
+                            space-x-2
+                          "
+                        >
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i class="material-icons">drag_indicator</i></a>
+                            </span>
+                          </li>
+                          <li class="">
+                            <span class="block p-1">
+                              <a class="cursor-pointer"><i
+                                class="material-icons text-red-500"
+                                style="font-size: 12px"
+                                >fiber_manual_record</i
+                              ></a>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <ul
+                        class="
+                          flex flex-row
+                          justify-center
+                          items-center
+                          space-x-2
+                        "
+                      >
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600 text-sm" id="delete"
+                              >delete</i
+                            ></a>
+                          </span>
                         </li>
-                        <li class=""> <span class="block p-1"> <i class="material-icons text-red-500"
-                              style="font-size:12px">fiber_manual_record</i>
-                          </span> </li>
+                        <li class="">
+                          <span class="block p-1">
+                            <a class="cursor-pointer" id="edit"><i class="material-icons text-gray-600">edit</i></a>
+                          </span>
+                        </li>
+                        <li class="">
+                          <span class="block p-1" id="add">
+                            <a class="cursor-pointer"><i class="material-icons text-gray-600">add_box</i></a>
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                  <div class="inline-flex items-center ">
-                    <ul class=" flex flex-row justify-center items-center space-x-2 ">
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600 text-sm">delete</i>
-                        </span>
-                      </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">edit</i>
-                        </span> </li>
-                      <li class=""> <span class="block p-1"> <i class="material-icons text-gray-600">add_box</i>
-                        </span> </li>
-                    </ul>
-                  </div>
+                  <p class="text-gray-400 font-light mt-1 mb-6">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque
+                  </p>
                 </div>
-                <p class="text-gray-400 font-light mt-1 mb-6"> Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque </p>
               </div>
             </div>
           </div>
         </div>
-      </div><!-- third card -->
-      <div class="container ">
-        <div class="max-w-xs w-full bg-gray-900 shadow-lg border mx-2 border-double border-green-400 rounded-md p-6">
-          <div class="flex flex-col">
-            <div class="">
-              <div class="flex flex-row justify-center"><span class="material-icons text-gray-200 text-sm" style="
-    font-size: 50px;">
-                  add_circle_outline
-                </span>
+        <!-- third card -->
+        <div class="container">
+          <div
+            class="
+              max-w-xs
+              w-full
+              bg-gray-900
+              shadow-lg
+              border
+              mx-2
+              border-double border-green-400
+              rounded-md
+              p-6
+            "
+          >
+            <div class="flex flex-col">
+              <div class="">
+                <div class="flex flex-row justify-center">
+                  <span
+                    class="material-icons text-gray-200 text-sm"
+                    style="font-size: 50px"
+                  >
+                    add_circle_outline
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
