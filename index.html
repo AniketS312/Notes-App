@@ -40,6 +40,7 @@
         flex
         justify-center
         items-center
+        flex-row
         inset-0
         z-50
         outline-none
@@ -56,8 +57,8 @@
       <div class="absolute bg-black opacity-80 inset-0 z-0"></div>
       <h1 class="text-3xl absolute top-8 left-8 text-gray-300">NOTES APP</h1>
       <!-- Content -->
-      <div class="relative min-h-screen flex flex-row justify-center">
-        <div class="container">
+      <div class="relative min-h-screen flex flex-row justify-space-evenly" id="main-div">
+        <div class="container m">
           <div
             class="
               max-w-xs
@@ -169,22 +170,23 @@
                       "
                     >
                       <h2
+                      id="edit-text"
                         class="
                           text-lg
                           mr-auto
                           italic
                           cursor-pointer
                           text-gray-300
-                          hover:text-purple-500
-                          truncate
-                        "
-                      >
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic
+                          hover:text-gray-500                        "                   
+                          contenteditable="true"
+                             >
+                          
+
+                       Click Here to add some text.
                       </h2>
                     </div>
                   </div>
-                  <div class="lg:flex py-2 text-sm text-gray-600">
+                  <!-- <div class="lg:flex py-2 text-sm text-gray-600">
                     <div class="flex-1 inline-flex items-center">
                       <div
                         class="
@@ -258,9 +260,9 @@
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque
-                  </p>
+                  </p> -->
 
-                  <div class="lg:flex py-2 text-sm text-gray-600">
+                  <!-- <div class="lg:flex py-2 text-sm text-gray-600">
                     <div class="flex-1 inline-flex items-center">
                       <div
                         class="
@@ -325,12 +327,12 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
-                  <p class="text-gray-400 font-light mt-1">
+                  </div> -->
+                  <!-- <p class="text-gray-400 font-light mt-1">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
@@ -438,22 +440,21 @@
                       "
                     >
                       <h2
+                      id="edit-text"
                         class="
                           text-lg
                           mr-auto
                           italic
                           cursor-pointer
                           text-gray-300
-                          hover:text-purple-500
-                          truncate
-                        "
+                          hover:text-gray-500                        "
+                          contenteditable="true"
                       >
-                        Lorem ipsum is placeholder text commonly used in the
-                        graphic
+                        Click Here to add some text
                       </h2>
                     </div>
                   </div>
-                  <div class="lg:flex py-2 text-sm text-gray-600">
+                  <!-- <div class="lg:flex py-2 text-sm text-gray-600">
                     <div class="flex-1 inline-flex items-center">
                       <div
                         class="
@@ -523,14 +524,15 @@
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque laudantium, totam rem
                     aperiam, eaque
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- third card -->
-        <div class="container">
+    </div>
+        <!-- Add Buton card -->
+        <div class="container absolute top-8 right-2" >
           <div
             class="
               max-w-xs
@@ -541,8 +543,10 @@
               mx-2
               border-double border-green-400
               rounded-md
-              p-6
+              p-3
+              cursor-pointer
             "
+            id="add-note"
           >
             <div class="flex flex-col">
               <div class="">
@@ -559,6 +563,5 @@
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
