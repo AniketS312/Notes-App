@@ -12,7 +12,6 @@ A simple CRUD note-taking app using html, css and js.
 TODO //
 1. Delete One of boxes.
 2. Any of the commented out code can be deleted
-3. Can you make the boxes have som margin between themselves. Justify: space-evenly might look ugly with less than 4 items so use margin (or anything else you can think of).
 4. Move the plus icon box to the right kind of like NOTES APP title.
 5. make the container box so after a couple more addtions the boxes will wrap below. 
 6. If you keep putting text it goes through the box. If you can make that wrap as well. I acutally think this might be a height thing with the container box so lets make that responsive as well.
